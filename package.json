@@ -1,0 +1,41 @@
+{
+  "name": "SaclaySlither",
+  "description": "a game with snakes on both sides of 118 road",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.prod.js -p --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fredvernier/SaclaySlither.git"
+  },
+  "keywords": [
+    "game",
+    "online",
+    "Massively multiplayer online game",
+    "MMOG"
+  ],
+  "author": "Frederic Vernier, Associate professor at Univ. Paris-Sud",
+  "version": "0.0.1",
+  "homepage": "http://vernier.frederic.free.fr/",
+  "bugs": {
+    "url": "https://github.com/fredvernier/SaclaySlither/issues"
+  },
+  "license": "MIT License",
+  "dependencies": {
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.8.1",
+    "webpack": "^3.11.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-dev-server": "^2.11.2"
+  }
+}
