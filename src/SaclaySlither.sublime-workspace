@@ -1,0 +1,1087 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ca",
+				"ca"
+			],
+			[
+				"text-",
+				"text-align\tproperty"
+			],
+			[
+				"fo",
+				"font-weight\tproperty"
+			],
+			[
+				"j",
+				"j"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"tr",
+				"transcription"
+			],
+			[
+				"u",
+				"u\tlet"
+			],
+			[
+				"xn",
+				"xn\tparameter"
+			],
+			[
+				"rem",
+				"removeChild\tmethod"
+			],
+			[
+				"l",
+				"l\tlet"
+			],
+			[
+				"s",
+				"size\tproperty"
+			],
+			[
+				"pa",
+				"panX\tproperty"
+			],
+			[
+				"send",
+				"send\tmethod"
+			],
+			[
+				"re",
+				"renderer\tproperty"
+			],
+			[
+				"cc",
+				"_connectSocket\twindow.WebSocketSubject"
+			],
+			[
+				"foo",
+				"foodLayer\tproperty"
+			],
+			[
+				"draw",
+				"drawEllipse\tmethod"
+			],
+			[
+				"con",
+				"console\tvar"
+			],
+			[
+				"SIZE",
+				"IMG_SIZE\tproperty"
+			],
+			[
+				"att",
+				"setAttribute\tmethod"
+			],
+			[
+				"h",
+				"height\tproperty"
+			],
+			[
+				"p",
+				"pageX\tproperty"
+			],
+			[
+				"image",
+				"drawImage\tmethod"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"is",
+				"isin"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"r",
+				"r"
+			],
+			[
+				"g",
+				"g"
+			],
+			[
+				"th",
+				"th"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"oc",
+				"otherbutfrance"
+			],
+			[
+				"uni",
+				"uniform_model1"
+			],
+			[
+				"z",
+				"z"
+			],
+			[
+				"tex",
+				"text-top"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"maron",
+				"macron"
+			],
+			[
+				"p0",
+				"p0"
+			],
+			[
+				"c0",
+				"c0"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"N",
+				"N"
+			],
+			[
+				"var",
+				"var"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"stoi",
+				"stoi"
+			],
+			[
+				"count",
+				"visibleCountries"
+			],
+			[
+				"n",
+				"n"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/vernier/Sites/SaclaySlither/package.json",
+			"settings":
+			{
+				"buffer_size": 1763,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/vernier/Sites/SaclaySlither/webpack.prod.js",
+			"settings":
+			{
+				"buffer_size": 2879,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/vernier/Sites/atlas/mapEdit.html",
+			"settings":
+			{
+				"buffer_size": 21672,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/server.ts",
+			"settings":
+			{
+				"buffer_size": 16948,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/NetworkSnake.ts",
+			"settings":
+			{
+				"buffer_size": 734,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "SaclaySlitherGame.ts",
+			"settings":
+			{
+				"buffer_size": 4917,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/vernier/Sites/SaclaySlither/tsconfig.json",
+			"settings":
+			{
+				"buffer_size": 350,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/vernier/Sites/SaclaySlither/webpack.config.js",
+			"settings":
+			{
+				"buffer_size": 1822,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "Package Control: install",
+		"selected_items":
+		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 468.0
+	},
+	"console":
+	{
+		"height": 192.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/vernier/Sites/SaclaySlither",
+		"/Users/vernier/Sites/SaclaySlither/css"
+	],
+	"file_history":
+	[
+		"/Users/vernier/Sites/SaclaySlither/dist/server/server.d.ts",
+		"/Users/vernier/Sites/SaclaySlither/src/server.ts",
+		"/Users/vernier/Sites/atlas/index.html",
+		"/Users/vernier/Sites/atlas/index-en.html",
+		"/Users/vernier/Sites/atlas/saveGeoJSON.php",
+		"/Users/vernier/Sites/atlas/atlas.json",
+		"/Users/vernier/Sites/atlas/common-atlas.js",
+		"/Users/vernier/Sites/heatMix/heatmix4.html",
+		"/Users/vernier/Sites/atlas/mapEdit.html",
+		"/Users/vernier/Sites/atlas/map18-07-16-15-42-38.geojson",
+		"/Users/vernier/Downloads/us_states.geojson",
+		"/Volumes/prjatlas/dglflf/trs/Saint-Victor.txt",
+		"/Volumes/prjatlas/dglflf/trs/Vocance.txt",
+		"/Volumes/prjatlas/dglflf/trs/Satillieu.txt",
+		"/Users/vernier/Sites/atlas/map18-07-16-09-51-21.geojson",
+		"/Users/vernier/Sites/atlas/map.json",
+		"/Users/vernier/Sites/atlas/maps/dep12.json",
+		"/Volumes/prjatlas/dglflf/trs/creole_reunionnais_(des_Hauts) (2).txt",
+		"/Users/vernier/Sites/atlas/maps/departments-truncate-simplify.json",
+		"/Users/vernier/Sites/atlas/map18-07-15-21-58-51.geojson",
+		"/Users/vernier/Sites/atlas/map18-07-15-17-01-37.geojson",
+		"/Users/vernier/Sites/atlas/map18-07-15-16-54-51.geojson",
+		"/Users/vernier/Sites/atlas/map18-07-15-16-52-25.geojson",
+		"/Users/vernier/Sites/atlas/map18-07-15-16-53-25.geojson",
+		"/Users/vernier/Sites/atlas/map18-07-15-16-54-24.geojson",
+		"/Users/vernier/Sites/atlas/map18-07-15-16-50-04.geojson",
+		"/Users/vernier/Sites/atlas/maps/metropole.geojson",
+		"/Users/vernier/Sites/atlas/map18-07-15-16-44-26.geojson",
+		"/Users/vernier/Sites/atlas/map18-07-15-14-26-04.geojson",
+		"/Users/vernier/Sites/heatMix/correlation.html",
+		"/Users/vernier/Sites/gapChart/data/Ligue1/2017-partiel.csv",
+		"/Users/vernier/Sites/SaclaySlither/src/index.ts",
+		"/Users/vernier/Sites/SaclaySlither/src/server.js",
+		"/Users/vernier/Sites/SaclaySlither/src/Snake.ts",
+		"/Users/vernier/Sites/heatMix/expeSetup.html",
+		"/Users/vernier/Sites/hgpyjama/index.html",
+		"/Users/vernier/Sites/atlas/maps/departments-truncate.json",
+		"/Users/vernier/Downloads/map.json",
+		"/Users/vernier/Downloads/map (1).json",
+		"/Users/vernier/Sites/atlas/maps/france.json",
+		"/Users/vernier/Sites/gapChart/data/Ligue1/france-template.txt",
+		"/Users/vernier/Sites/gapChart/ligue1-2017.html",
+		"/Users/vernier/Sites/SaclaySlither/server.js",
+		"/Users/vernier/Sites/gapChart/data/Ligue1/2017.csv",
+		"/Users/vernier/Sites/SaclaySlither/src/NetworkSnake.ts",
+		"/Users/vernier/Sites/SaclaySlither/src/PixiSnake.ts",
+		"/Users/vernier/Sites/SaclaySlither/src/util.ts",
+		"/Users/vernier/Sites/SaclaySlither/src/SaclaySlitherGame.ts",
+		"/Users/vernier/Downloads/map (3).json",
+		"/Users/vernier/Sites/atlas/polygons-intersect.js",
+		"/Users/vernier/Sites/SaclaySlither/node_modules/polygons-intersect/lib/polygon.js",
+		"/Users/vernier/Downloads/map (2).json",
+		"/Users/vernier/Sites/vorofred/index.html",
+		"/Users/vernier/Sites/SaclaySlither/node_modules/@types/ws/index.d.ts",
+		"/Users/vernier/Sites/SaclaySlither/nodemon.json",
+		"/Users/vernier/Lectures/admL3/Licence18.def",
+		"/Users/vernier/Sites/atlas/alf.csv",
+		"/Users/vernier/Sites/SaclaySlither/index2.html",
+		"/Volumes/prjatlas/dglflf/trs/Nice2.txt",
+		"/Volumes/prjatlas/dglflf/trs/quebecois_estrien.txt",
+		"/Volumes/prjatlas/dglflf/trs/arabe_syrien.txt",
+		"/Volumes/prjatlas/dglflf/trs/Quintenas.txt",
+		"/Users/vernier/Sites/SaclaySlither/README.md",
+		"/Users/vernier/Sites/hgpyjama/data/sp100hst.php",
+		"/Users/vernier/Sites/hgpyjama/data/market/UTX.csv",
+		"/Users/vernier/Sites/hgpyjama/data/market/sp100x.csv",
+		"/Users/vernier/Sites/hgpyjama/data/weather/Weather20130113I75003PA1.csv",
+		"/Users/vernier/Sites/SaclaySlither/index.html",
+		"/Users/vernier/Sites/hgpyjama/data/marketbin/BRK-B.bin",
+		"/Users/vernier/Sites/SaclaySlither/Snake.js",
+		"/Users/vernier/Sites/SaclaySlither/index.js",
+		"/Users/vernier/Sites/SaclaySlither/webpack.prod.js",
+		"/Users/vernier/Sites/SaclaySlither/src/test3.ts",
+		"/Users/vernier/Sites/IntroGraphic/qcm7/exo1.php",
+		"/Users/vernier/Sites/SaclaySlither/index3.html",
+		"/Users/vernier/Sites/SaclaySlither/src/Snake3.ts",
+		"/Users/vernier/Sites/SaclaySlither/css/style.css",
+		"/Users/vernier/Sites/SaclaySlither/tsconfig.json",
+		"/Users/vernier/Sites/SaclaySlither/node_modules/@types/websocket/index.d.ts",
+		"/Volumes/prjatlas/dglflf/trs/Namur.txt",
+		"/Volumes/prjatlas/dglflf/trs/Saorge.txt",
+		"/Volumes/prjatlas/dglflf/trs/Monaco.txt",
+		"/Volumes/prjatlas/dglflf/trs/La_Celle-Dunoise.txt",
+		"/Users/vernier/Sites/SaclaySlither/dist/server.js",
+		"/Users/vernier/Sites/SaclaySlither/src/test2.ts",
+		"/Users/vernier/Sites/SaclaySlither/src/Snake2.ts",
+		"/Users/vernier/Sites/SaclaySlither/node_modules/p5/lib/p5.d.ts",
+		"/Users/vernier/Sites/SaclaySlither/node_modules/p5/lib/p5.global-mode.d.ts",
+		"/Users/vernier/Sites/SaclaySlither/node_modules/p5/lib/p5.js",
+		"/Users/vernier/Sites/SaclaySlither/node_modules/p5/package.json",
+		"/Users/vernier/Sites/SaclaySlither/src/Point.ts",
+		"/Users/vernier/Sites/SaclaySlither/src/Food.ts",
+		"/Users/vernier/Sites/devvisu/src/style.css",
+		"/Users/vernier/Sites/devvisu/src/index.js",
+		"/Users/vernier/Sites/devvisu/src/toto.js",
+		"/Users/vernier/Sites/devvisu/src/index.html",
+		"/Users/vernier/Sites/devvisu/package.json",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/package.json",
+		"/Users/vernier/Sites/devvisu/webpack.config.js",
+		"/Users/vernier/Sites/devvisu/src2/index.js",
+		"/Users/vernier/Sites/SaclaySlither/webpack.config.js",
+		"/Users/vernier/Sites/Lic/l3/exo2.php",
+		"/Users/vernier/Sites/Lic/l3/resExam.php5",
+		"/Users/vernier/Sites/perso/Teaching/secret.html",
+		"/Users/vernier/Sites/Lic/index.html",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Velha.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Archignat.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/latin.txt",
+		"/Users/vernier/Sites/devvisu/index.js",
+		"/Users/vernier/Sites/SaclaySlither/src2/index.ts",
+		"/Users/vernier/Sites/devvisu/src2/index2.html",
+		"/Users/vernier/Sites/devvisu/src/index3.html",
+		"/Users/vernier/Sites/devvisu/src/index2.html",
+		"/Users/vernier/Sites/Lic/l1/resExam.php5",
+		"/Users/vernier/Sites/Lic/l2/exo2.php",
+		"/Users/vernier/Sites/Lic/l2/resExam.php5",
+		"/Users/vernier/Sites/Lic/l3/index.php5",
+		"/Users/vernier/Sites/Lic/l2/index.php5",
+		"/Users/vernier/Sites/atlas/voisins.json",
+		"/Users/vernier/Sites/Lic/Etudiants2016.csv",
+		"/Users/vernier/Sites/atlas/atlasItalie.json",
+		"/Users/vernier/Sites/SaclaySlither/src/index.js",
+		"/Users/vernier/Sites/SaclaySlither/.gitignore",
+		"/Users/vernier/Sites/atlas/listeItalia.html",
+		"/Users/vernier/EnglishTV.txt",
+		"/Users/vernier/Sites/atlas/download.php",
+		"/Users/vernier/Sites/atlas/torino.html",
+		"/Users/vernier/Sites/atlas/atlas-style.css"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 172.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"test17",
+			"canvasa1",
+			"bluring",
+			"canvasa",
+			"colorWB",
+			"setDataset",
+			"languages",
+			"songas",
+			"hoveredDotId",
+			"hoveredStateId",
+			"hoveredRegionId",
+			"paris",
+			"innerHTML",
+			"trans",
+			"Interse",
+			"sort",
+			"url",
+			"post",
+			"ck",
+			".type",
+			"doInters",
+			"soundFile",
+			".sound.",
+			"play",
+			"data1",
+			"fill-opacity",
+			"opacity",
+			"mirabel",
+			"doIntersection",
+			"24",
+			"\"lig\"",
+			"ligur",
+			"rect",
+			"\"square\"",
+			"rect",
+			"union",
+			"reunion",
+			"monaco",
+			"frontiers",
+			"1a++",
+			"splice",
+			"displayLegend",
+			"alm",
+			"1a++",
+			"svg",
+			"cc",
+			"bb",
+			"timepos[",
+			"question",
+			".question",
+			"du centre",
+			"let's",
+			"tottrial",
+			"tigra",
+			"L.",
+			"bb",
+			"json",
+			"lissa",
+			"Ami",
+			".send(",
+			"socket",
+			"wsServer",
+			".gameList",
+			"^([\\w-]+)[ ]+([0-9])-([0-9]) ([\\w-]+)[ ]*$",
+			"\\[(.*)\\][ ]*\\n",
+			"^Round ([0-9]+)[\\n]\\[(.*)\\][ ]*$",
+			"save",
+			"maxpixlat",
+			"500+",
+			"vorobbox",
+			"setBBox",
+			"53.75",
+			"testreg",
+			"recycle",
+			"strokeStyle",
+			"dist",
+			"frontiers",
+			"entryP",
+			"neighb",
+			"halhed",
+			".splice",
+			".transcription",
+			"ords[i].nam",
+			"records[i].",
+			"records",
+			"brightness",
+			"ital",
+			"c4",
+			"tigra",
+			"debug",
+			"testCollision",
+			"updateSnakes",
+			"food",
+			"disphist",
+			"1220",
+			"rand",
+			"render",
+			"keybo",
+			"mouseDown",
+			"this.foodLayer",
+			"updateBeforeRender",
+			"INI ",
+			"setInterval",
+			"initGame",
+			"food",
+			"foodLayer",
+			"render()",
+			".container",
+			"=>",
+			"wsServer",
+			"sendUpdateToServer",
+			"socketReq",
+			"initGame",
+			"initNetwork",
+			"socket",
+			"timer",
+			"renun",
+			" a ",
+			"9",
+			"contra",
+			"nice",
+			"tayo",
+			"goWorld",
+			"tayo",
+			"saorge",
+			"\"noc\"",
+			"cro",
+			"croiss"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$1, $4, $2-$3",
+			"",
+			"$1e journée, $2",
+			"reg",
+			"ctrlSnake",
+			"R",
+			" sketch.dist",
+			"pos[0]",
+			"SaclaySlitherGame.WORLDRADIUS",
+			"console.log",
+			"ssg0.snakes[k]!",
+			"this",
+			"ssg0",
+			"sketch.height",
+			"ssg0.globZoom",
+			"SaclaySlitherGame.BORDER_SIZE",
+			"sketch.height",
+			"sketch.width",
+			"sketch.height",
+			"",
+			"sketch.",
+			"SaclaySlitherGame.IMG_SIZE",
+			"]",
+			"[",
+			"\"country\":\"VoisinItal",
+			"\"lat\"",
+			"\"lon\"",
+			"\"lat2\"",
+			"{\"country\":\"$3\", \"language\":\"$2\", \"fullname\":\"$1\", \"region\":\"UNKNOWN\", \"name\":\"$4\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$4.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"Italie\", \"language\":\"$2\", \"fullname\":\"$1\", \"region\":\"$4\", \"name\":\"$3\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$3.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"Italie\", \"language\":\"$1\", \"fullname\":\"$1\", \"name\":\"$3\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$3.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"$2\", \"fullname\":\"$1\", \"name\":\"$3\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$3.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"$3\", \"fullname\":\"$1\", \"name\":\"$4\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$4.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"$3\", \"fullname\":\"$1\", \"name\":\"$4\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$4.txt\", \"display\": true, \"lon\":$8, \"lat\":$7, \"text\":\"$6\"},\n",
+			"  {\"country\":\"$3\", \"fullname\":\"$1\",      \"name\":\"$4\",                    \"textAlign\":\"left\",   \"textBaseline\":\"middle\", \"soundfile\":\"$5\",                    \"txtfile\":\"txt/new/$4.txt\",                     \"display\": true, \"lon\":$8,      \"lat\":$7    ,\"text\":\"$6\"},\n",
+			"  {\"country\":\"$3\",       \"name\":\"$4\",                    \"textAlign\":\"left\",   \"textBaseline\":\"middle\", \"soundfile\":\"$5\",                    \"txtfile\":\"txt/new/$4.txt\",                     \"display\": true, \"lon\":$8,      \"lat\":$7    ,\"text\":\"$6\"},\n",
+			"$1, $4, $2-$3",
+			"",
+			"$1e journée, $2",
+			"$1e journée",
+			"",
+			"$1, $4, $2-$3",
+			"LasP",
+			"$1, $4, $2-$3",
+			"",
+			"$1e journée, $2",
+			"",
+			"$1e journée, $2",
+			"$1, $4, $2-$3",
+			"LasP",
+			"$1, $4, $2-$3",
+			"",
+			"$1e journée, $2"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/vernier/Sites/SaclaySlither/package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								292,
+								354
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/vernier/Sites/SaclaySlither/webpack.prod.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								578,
+								578
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/vernier/Sites/atlas/mapEdit.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21672,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4363,
+								4363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2346.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/server.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16948,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								178,
+								178
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"extensions":
+							[
+								"ts"
+							],
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "server/NetworkSnake.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								326,
+								326
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"extensions":
+							[
+								"ts"
+							],
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "SaclaySlitherGame.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"extensions":
+							[
+								"ts"
+							],
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/vernier/Sites/SaclaySlither/tsconfig.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 350,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								46
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"tsconfig-lints":
+							[
+								[
+									[
+										80,
+										83
+									],
+									"unknown key 'lib' in compilerOptions"
+								],
+								[
+									[
+										200,
+										215
+									],
+									"unknown key 'esModuleInterop' in compilerOptions"
+								],
+								[
+									[
+										148,
+										154
+									],
+									"unknown key 'strict' in compilerOptions"
+								],
+								[
+									[
+										168,
+										184
+									],
+									"unknown key 'moduleResolution' in compilerOptions"
+								],
+								[
+									[
+										38,
+										41
+									],
+									"value of 'target' should be one of ['es3', 'es5', 'es6']"
+								],
+								[
+									[
+										138,
+										141
+									],
+									"value of 'outDir' should match regex (.+/)$"
+								]
+							]
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/vernier/Sites/SaclaySlither/webpack.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1316,
+								1316
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 169.0
+	},
+	"output.find_results":
+	{
+		"height": 363.0
+	},
+	"pinned_build_system": "",
+	"project": "SaclaySlither.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Sites/atlas/atlas.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 628.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 177.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

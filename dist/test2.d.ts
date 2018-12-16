@@ -1,0 +1,38 @@
+import { Food, Snake } from './Snake2';
+export declare class SaclaySlitherGame {
+    static BORDER_SIZE: number;
+    static NBINITIALSNAKES: number;
+    static IMG_SIZE: number;
+    static LOOSEWEIGHT: number;
+    static LOOSEWEIGHTPACE: number;
+    static WORLDRADIUS: number;
+    static MIN_SPEED: number;
+    static PREF_SPEED: number;
+    static MAX_SPEED: number;
+    static MAX_TURN: number;
+    static boop: p5.SoundFile;
+    static img0: HTMLCanvasElement;
+    static img1: HTMLCanvasElement;
+    static img2: HTMLCanvasElement;
+    static img3: HTMLCanvasElement;
+    static img4: HTMLCanvasElement;
+    static imgRadar: HTMLCanvasElement;
+    canvas: HTMLCanvasElement;
+    foods: Food[];
+    snakes: (Snake | null)[];
+    gaussR: number;
+    gauss: number[][];
+    globZoom: number;
+    automaticZoom: boolean;
+    state: number;
+    frameCount: number;
+    lastTime: number;
+    panX: number;
+    panY: number;
+    names: string[];
+    colors: number[][][];
+    constructor();
+    init(): void;
+    draw(): void;
+}
+export declare function dist(x1: number, y1: number, x2: number, y2: number): number;

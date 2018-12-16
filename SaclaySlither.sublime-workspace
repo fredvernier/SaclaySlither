@@ -1,0 +1,768 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"is",
+				"isin"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"r",
+				"r"
+			],
+			[
+				"g",
+				"g"
+			],
+			[
+				"th",
+				"th"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"oc",
+				"otherbutfrance"
+			],
+			[
+				"uni",
+				"uniform_model1"
+			],
+			[
+				"z",
+				"z"
+			],
+			[
+				"tex",
+				"text-top"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"maron",
+				"macron"
+			],
+			[
+				"p0",
+				"p0"
+			],
+			[
+				"c0",
+				"c0"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"N",
+				"N"
+			],
+			[
+				"var",
+				"var"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"stoi",
+				"stoi"
+			],
+			[
+				"count",
+				"visibleCountries"
+			],
+			[
+				"n",
+				"n"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "{\n  \"name\": \"SaclaySlither\",\n  \"description\": \"a game with snakes on both sides of 118 road\",\n  \"main\": \"dist/index.js\",\n  \"types\": \"dist/dist/index.d.ts\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"tsc\": \"tsc\",\n    \"compile\": \"tsc\",\n    \"start\": \"webpack-dev-server --open\",\n    \"build\": \"webpack --config webpack.prod.js -p --progress\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/fredvernier/SaclaySlither.git\"\n  },\n  \"keywords\": [\n    \"game\",\n    \"online\",\n    \"Massively multiplayer online game\",\n    \"MMOG\"\n  ],\n  \"author\": {\n    \"name\": \"Frederic Vernier, Associate professor at Univ. Paris-Sud\",\n    \"url\": \"http://vernier.frederic.free.fr/\"\n  },\n  \"version\": \"0.0.1\",\n  \"homepage\": \"http://vernier.frederic.free.fr/\",\n  \"bugs\": {\n    \"url\": \"https://github.com/fredvernier/SaclaySlither/issues\"\n  },\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"p5\": \"^0.6.1\"\n  },\n  \"devDependencies\": {\n    \"css-loader\": \"^0.28.9\",\n    \"file-loader\": \"^1.1.11\",\n    \"style-loader\": \"^0.20.1\",\n    \"url-loader\": \"^1.0.1\",\n    \"grunt\": \"^1.0.2\",\n    \"lodash\": \"^4.17.10\",\n    \"eslint\": \"^4.19.1\",\n    \"typescript\": \"^2.8.3\",\n    \"ts-loader\": \"^4.3.0\",\n    \"babel-cli\": \"^6.26.0\",\n    \"webpack-cli\": \"^2.1.4\",\n    \"webpack\": \"^4.9.1\",\n    \"webpack-bundle-analyzer\": \"^2.11.1\",\n    \"webpack-dev-server\": \"^3.1.4\",\n    \"@types/node\": \"^9.4.6\"\n  }\n}\n",
+			"file": "package.json",
+			"file_size": 1341,
+			"file_write_time": 131724130574033073,
+			"settings":
+			{
+				"buffer_size": 1401,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "webpack.config.js",
+			"settings":
+			{
+				"buffer_size": 1182,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 36,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.ts",
+			"settings":
+			{
+				"buffer_size": 1432,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 253,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "Package Control: install",
+		"selected_items":
+		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 468.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/vernier/Sites/devvisu/src/style.css",
+		"/Users/vernier/Sites/atlas/index-en.html",
+		"/Users/vernier/Sites/atlas/index.html",
+		"/Users/vernier/Sites/devvisu/src/index.js",
+		"/Users/vernier/Sites/devvisu/src/toto.js",
+		"/Users/vernier/Sites/devvisu/src/index.html",
+		"/Users/vernier/Sites/devvisu/package.json",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/package.json",
+		"/Users/vernier/Sites/devvisu/webpack.config.js",
+		"/Users/vernier/Sites/devvisu/src2/index.js",
+		"/Users/vernier/Sites/SaclaySlither/webpack.config.js",
+		"/Users/vernier/Sites/hgpyjama/index.html",
+		"/Users/vernier/Sites/Lic/l3/exo2.php",
+		"/Users/vernier/Sites/Lic/l3/resExam.php5",
+		"/Users/vernier/Sites/perso/Teaching/secret.html",
+		"/Users/vernier/Sites/Lic/index.html",
+		"/Users/vernier/Sites/atlas/common-atlas.js",
+		"/Users/vernier/Sites/atlas/atlas.json",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Velha.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Archignat.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/latin.txt",
+		"/Users/vernier/Sites/devvisu/index.js",
+		"/Users/vernier/Sites/SaclaySlither/src/index.ts",
+		"/Users/vernier/Sites/SaclaySlither/src2/index.ts",
+		"/Users/vernier/Sites/devvisu/src2/index2.html",
+		"/Users/vernier/Sites/devvisu/src/index3.html",
+		"/Users/vernier/Sites/devvisu/src/index2.html",
+		"/Users/vernier/Sites/SaclaySlither/README.md",
+		"/Users/vernier/Sites/SaclaySlither/css/style.css",
+		"/Users/vernier/Sites/SaclaySlither/index.html",
+		"/Users/vernier/Sites/SaclaySlither/tsconfig.json",
+		"/Users/vernier/Sites/SaclaySlither/webpack.prod.js",
+		"/Users/vernier/Sites/Lic/l1/resExam.php5",
+		"/Users/vernier/Sites/Lic/l2/exo2.php",
+		"/Users/vernier/Sites/Lic/l2/resExam.php5",
+		"/Users/vernier/Sites/Lic/l3/index.php5",
+		"/Users/vernier/Sites/Lic/l2/index.php5",
+		"/Users/vernier/Sites/atlas/voisins.json",
+		"/Users/vernier/Sites/atlas/alf.csv",
+		"/Users/vernier/Sites/Lic/Etudiants2016.csv",
+		"/Users/vernier/Sites/atlas/atlasItalie.json",
+		"/Users/vernier/Sites/SaclaySlither/src/index.js",
+		"/Users/vernier/Sites/SaclaySlither/.gitignore",
+		"/Users/vernier/Sites/atlas/listeItalia.html",
+		"/Users/vernier/EnglishTV.txt",
+		"/Users/vernier/Sites/atlas/download.php",
+		"/Users/vernier/Sites/atlas/torino.html",
+		"/Users/vernier/Sites/atlas/atlas-style.css",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Goutz.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Seraing.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Vielsalm.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Mont-Saint-Guibert.txt",
+		"/Users/vernier/Projects/MindMap/data/liste_mots.txt",
+		"/Users/vernier/Projects/MindMap/data/saved16-5-2018_at_14.46.25.json",
+		"/Users/vernier/Projects/MindMap/data/saved16-5-2018_at_9.28.23.json",
+		"/Users/vernier/Sites/Lic/Etudiants2017.csv",
+		"/Users/vernier/Projects/MindMap/data/saved16-5-2018_at_8:41:58.json",
+		"/Users/vernier/Projects/MindMap/data/saved.json",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Guern.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/bislama.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Ripoll.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Perpignan.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Bonifacio.txt",
+		"/Users/vernier/Sites/Lic/l3/notes.csv",
+		"/Users/vernier/Sites/Lic/l3/exo1.php",
+		"/Users/vernier/Sites/Lic/l2/notes.csv",
+		"/Users/vernier/Sites/Lic/l1/notes.csv",
+		"/Users/vernier/Sites/Lic/l2/exo1.php",
+		"/Users/vernier/Sites/Lic/l1/exo2.php",
+		"/Users/vernier/Sites/Lic/l1/exo1.php",
+		"/Users/vernier/Sites/Lic/l1/index.php5",
+		"/Users/vernier/Library/Processing/preferences.txt",
+		"/Volumes/0651738850/MindMap.pde",
+		"/Users/vernier/Downloads/arabe.txt",
+		"/Users/vernier/Sites/mecafield/index.html",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/arabe_marocain.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Sassello.txt",
+		"/Users/vernier/Sites/gapChart/gapChart.js",
+		"/Users/vernier/Sites/gapChart/liga-2015.html",
+		"/Users/vernier/Sites/gapChart/liga-2014.html",
+		"/Users/vernier/Sites/gapChart/liga-2013.html",
+		"/Users/vernier/Sites/gapChart/data/Ligue1/france-template.txt",
+		"/Users/vernier/Sites/gapChart/liga-2016.html",
+		"/Users/vernier/Sites/gapChart/liga-2017.html",
+		"/Users/vernier/Sites/gapChart/data/Ligue1/2016.csv",
+		"/Users/vernier/Sites/gapChart/liga-2012.html",
+		"/Users/vernier/Sites/gapChart/data/Ligue1/2017.csv",
+		"/Users/vernier/Sites/gapChart/ligue1-2017.html",
+		"/Users/vernier/Sites/gapChart/data/Liga/2017.csv",
+		"/Users/vernier/Sites/gapChart/data/Liga/2016.csv",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Grizac.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/nelemwa.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Schirrhein.txt",
+		"/Users/vernier/Sites/hgpyjama/paper.html",
+		"/Users/vernier/Sites/atlas/libs/themes/blue/style.css",
+		"/Users/vernier/Sites/atlas/Videos/index.html",
+		"/Users/vernier/Sites/atlas/videos/Fable_sip.xml",
+		"/Users/vernier/Sites/atlas/liste.html",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Monacia-d'Aullene.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Corte.txt",
+		"/Applications/MAMP/logs/php_error.log",
+		"/Users/vernier/Downloads/Grizac.txt",
+		"/Volumes/prjpade/Tache_3_linguistique/dglflf/trs/Transinne.txt",
+		"/Users/vernier/Sites/glwebserver/glwebserver.cpp",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/interp.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/tile.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/tdigest.d.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/scale.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/rect.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/point.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/example2.html",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/path.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/parser.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/multivariate-normal.d.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/mask.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/index.html",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/index.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/image.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/gaussian-blur.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/derived-buffer.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/data-buffer.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/composer.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/color.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/canvas-renderer.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/weaving.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/vega-extractor.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/util.ts",
+		"/Users/vernier/Projects/Multiclass-Density-Maps/src/tiling.ts"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 172.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"biologiques",
+			"computePolygons",
+			"mul",
+			"luchon",
+			"bagnier",
+			"\"cro\"",
+			"rable",
+			"roissant",
+			"dompierre",
+			"path",
+			"computePolygons",
+			"function",
+			"c6",
+			"checked",
+			"other",
+			"england",
+			"c6",
+			"\"",
+			"\"country\":\"Ital",
+			"searchstrin",
+			"cblue",
+			"c2",
+			"ellips",
+			"monac",
+			"monacc",
+			"goutz",
+			"béti",
+			"beti",
+			"Idée 14",
+			"LANSARI",
+			"decelle",
+			"info215",
+			"seaux",
+			"t2a",
+			"openn",
+			"ventos",
+			"xxx",
+			"flag",
+			"nice",
+			"c6",
+			"visibleCountries",
+			"c6",
+			"Bonifacio",
+			"mona",
+			"guern",
+			"gout",
+			"Etudiants",
+			"chanc",
+			"chans",
+			"fred",
+			"save",
+			"fréd",
+			"fred",
+			"debug",
+			"monde",
+			"risoul",
+			"Bagnolo",
+			"\"lat2\"",
+			"\"lat\"",
+			"\"lon\"",
+			"voisin",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*) (.*))\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[([\\-0-9.]*),([\\-0-9.]*)\\]\\n}\\n},\\n\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*)( \\([A-Z]*\\)))\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[([\\-0-9.]*),([\\-0-9.]*)\\]\\n}\\n},\\n\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*)( \\([A-Z]*\\))?)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[([\\-0-9.]*),([\\-0-9.]*)\\]\\n}\\n},\\n\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*) (\\([A-Z]*\\))?)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[([\\-0-9.]*),([\\-0-9.]*)\\]\\n}\\n},\\n\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*) (\\([A-Z]*\\)))\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[([\\-0-9.]*),([\\-0-9.]*)\\]\\n}\\n},\\n\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*) (.*))\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[([\\-0-9.]*),([\\-0-9.]*)\\]\\n}\\n},\\n\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*) (.*))\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[[\\-0-9.]*,[\\-0-9.]*\\]\\n}\\n},\\n\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*) (.*))\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[[0-9.]*,[0-9.]*\\]\\n}\\n},\\n\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"((.*) (.*) (.*))\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[[0-9.]*,[0-9.]*\\]\\n}\\n},\\n",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*) (.*) (.*) (.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[[0-9.]*,[0-9.]*\\]\\n}\\n},",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[[0-9.]*,[0-9.]*\\]\\n}\\n},",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",\\n\"coordinates\": \\[[0-9.]*,[0-9.]*\\]",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},\\n\"geometry\": {\\n\"type\": \"Point\",",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>(<br>)*(.*)\"\\n},",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)' controls='controls'><br>Your browser does not support the audio element.<br></audio>",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*' src='(.*)'",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*' height='[0-9]*'",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0-9]*'",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='[0..9]*'",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width='",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width=",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width\\=\\'300\\' ",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"\\<audio width\\=\\'300\\' height\\=\\'32\\' src\\=\\'",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": ",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": \\{\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width\\=\\'300\\' height\\=\\'32\\' src\\=\\'",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\":",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\n\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width\\=\\'300\\' height\\=\\'32\\' src\\=\\'",
+			"{\\n\\\"type\\\": \\\"Feature\\\"",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\\"properties\\\":",
+			"{\\n\\\"type\\\": \\\"Feature\\\"\\,\\\"properties\\\": {\\n\\\"name\\\": \\\"(.*)\\\"\\,\\n\\\"html\\\": \\\"<audio width\\=\\'300\\' height\\=\\'32\\' src\\=\\'",
+			"{\\n\\\"type\\\": \\\"Feature\\\",\\\"properties\\\": {\\n\\\"name\\\": \\\".*\\\",\\n\\\"html\\\": \\\"<audio width\\=\\'300\\' height\\=\\'32\\' src\\=\\'",
+			"{\\n\\\"type\\\": \"Feature\",\"properties\": {\\n\\\"name\\\": \\\".*\\\",\\n\\\"html\\\": \\\"<audio width='300' height='32' src='",
+			"{\\n\\\"type\\\": \"Feature\",",
+			"{\\\"",
+			"\"lan",
+			"gimat",
+			"pavie",
+			"gimat",
+			"gout",
+			"/oc",
+			"omani",
+			"contra",
+			"guern",
+			"etien",
+			"c4",
+			"^([\\w-]+)[ ]+([0-9])-([0-9]) ([\\w-]+)[ ]*$",
+			"\\[(.*)\\][ ]*\\n",
+			"^Round ([0-9]+)[\\n]\\[(.*)\\][ ]*$",
+			"^Round ([0-9]+)",
+			"\\[(.*)\\][ ]*\\n",
+			"^([\\w-]+)[ ]+([0-9])-([0-9]) ([\\w-]+)[ ]*$",
+			"Las P",
+			"^([\\w-]+)[ ]+([0-9])-([0-9]) ([\\w-]+)[ ]*$",
+			"\\[(.*)\\][ ]*\\n",
+			"^Round ([0-9]+)[\\n]\\[(.*)\\][ ]*$",
+			"16",
+			"15",
+			"\\[(.*)\\][ ]*\\n",
+			"^Round ([0-9]+)[\\n]\\[(.*)\\][ ]*$",
+			"^([\\w-]+)[ ]+([0-9])-([0-9]) ([\\w-]+)[ ]*$",
+			"Las P",
+			"^([é\\w-]+)[ ]+([0-9])-([0-9]) ([é\\w-]+)[ ]*$",
+			"^([\\w-]+)[ ]+([0-9])-([0-9]) ([\\w-]+)[ ]*$",
+			"\\[(.*)\\][ ]*\\n",
+			"^Round ([0-9]+)[\\n]\\[(.*)\\][ ]*$"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\"country\":\"VoisinItal",
+			"\"lat\"",
+			"\"lon\"",
+			"\"lat2\"",
+			"{\"country\":\"$3\", \"language\":\"$2\", \"fullname\":\"$1\", \"region\":\"UNKNOWN\", \"name\":\"$4\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$4.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"Italie\", \"language\":\"$2\", \"fullname\":\"$1\", \"region\":\"$4\", \"name\":\"$3\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$3.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"Italie\", \"language\":\"$1\", \"fullname\":\"$1\", \"name\":\"$3\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$3.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"$2\", \"fullname\":\"$1\", \"name\":\"$3\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$3.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"$3\", \"fullname\":\"$1\", \"name\":\"$4\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$4.txt\", \"display\": true, \"lon\":$9, \"lat\":$8, \"text\":\"$7\"},\n",
+			"{\"country\":\"$3\", \"fullname\":\"$1\", \"name\":\"$4\", \"textAlign\":\"left\", \"textBaseline\":\"middle\", \"soundfile\":\"$5\", \"txtfile\":\"txt/new/$4.txt\", \"display\": true, \"lon\":$8, \"lat\":$7, \"text\":\"$6\"},\n",
+			"  {\"country\":\"$3\", \"fullname\":\"$1\",      \"name\":\"$4\",                    \"textAlign\":\"left\",   \"textBaseline\":\"middle\", \"soundfile\":\"$5\",                    \"txtfile\":\"txt/new/$4.txt\",                     \"display\": true, \"lon\":$8,      \"lat\":$7    ,\"text\":\"$6\"},\n",
+			"  {\"country\":\"$3\",       \"name\":\"$4\",                    \"textAlign\":\"left\",   \"textBaseline\":\"middle\", \"soundfile\":\"$5\",                    \"txtfile\":\"txt/new/$4.txt\",                     \"display\": true, \"lon\":$8,      \"lat\":$7    ,\"text\":\"$6\"},\n",
+			"$1, $4, $2-$3",
+			"",
+			"$1e journée, $2",
+			"$1e journée",
+			"",
+			"$1, $4, $2-$3",
+			"LasP",
+			"$1, $4, $2-$3",
+			"",
+			"$1e journée, $2",
+			"",
+			"$1e journée, $2",
+			"$1, $4, $2-$3",
+			"LasP",
+			"$1, $4, $2-$3",
+			"",
+			"$1e journée, $2"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								988,
+								988
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "webpack.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/index.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								929,
+								929
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"extensions":
+							[
+								"ts"
+							],
+							"syntax": "Packages/ArcticTypescript/theme/Typescript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 168.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 363.0
+	},
+	"pinned_build_system": "",
+	"project": "SaclaySlither.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

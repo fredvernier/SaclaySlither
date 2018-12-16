@@ -1,0 +1,599 @@
+//import 'p5';
+require ('./Snake')
+import {Point, Food, Snake} from './Snake';
+var p5 = require("p5");
+require('p5/lib/addons/p5.sound')
+//require('p5/lib/addons/p5.dom')
+
+
+export class SaclaySlitherGame {
+  static BORDER_SIZE:number            = 512;
+  static NBINITIALSNAKES:number        = 2 ;
+  static IMG_SIZE:number               = 128;
+
+   // combien de poids perd un serpend qui courre
+  static LOOSEWEIGHT:number     = 2;
+
+  // un serpend qui courre ne perds pas du poids a chaque affichage mais 1 fois sur LOOSEWEIGHTPACE
+  static LOOSEWEIGHTPACE:number = 4;
+
+  // La taille du monde qui a une forme de disque
+  static WORLDRADIUS:number     = 1500;
+
+  // Vitesse minimum
+  static MIN_SPEED:number       = 8; // set to 0 to allow snakes to stop !
+
+  // vitesse preferre quand tout va bien
+  static PREF_SPEED:number      = 8;
+
+  // vitesse maximum d'un serpent qui courre
+  static MAX_SPEED:number       = 16;
+
+  // l'angle maximal enter la tete et le cou => c'est cet angle qui donne le "rayon de braquage" du serpent.
+  // mais ca depend aussi de la taille du serpent et du zoom
+  static MAX_TURN:number        = Math.PI/32;
+
+  // assets
+  static boop: p5.SoundFile;
+  static img0: p5.Image;
+  static img1: p5.Image;
+  static img2: p5.Image;
+  static img3: p5.Image;
+  static img4: p5.Image;
+  static imgRadar: p5.Image;
+  //let pg1: any;
+  //let pg2: p5.Graphics;
+
+  // game data
+  foods:Food[]                         = [];
+  snakes:(Snake|null)[]                = [];
+  gaussR:number                        = 8;
+  gauss: number[][]                    = [];
+
+  // le niveau de zoom en fonction de la taille du serpent principal
+  globZoom = 1.5;
+
+  // ...si le zoom automatique est actif
+  automaticZoom:boolean = true;
+
+  state:number = 1;
+
+  names:string[]       = ["Fred", "Nicolas", "Yacine", "Olivia", "Medhi", "Christian", "Laura", "Guillaume",
+                          "Sandrine", "Lila", "Sarah", "Cecile", "Philippe", "Emmy", "Florian"];
+  colors: number[][][] = [[[0, 0, 255], [0, 0, 255], [255, 255, 255], [255, 255, 255], [255, 0, 0], [255, 0, 0]], // french
+                          [[96, 96, 255], [96, 96, 192], [96, 96, 128], [96, 96, 96], [96, 96, 128], [96, 96, 192]], // shades of blue
+                          [[255, 96, 0], [192, 96, 0], [128, 96, 0], [96, 96, 0], [128, 96, 0], [192, 96, 0]], // shades of red
+                          [[0, 0, 255], [0, 255, 255], [0, 255, 0], [255, 255, 0], [255, 0, 0], [255, 0, 255]], // rainbow
+                          [[0, 255, 0], [0, 255, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0]], // portugese
+                          [[0, 0, 0], [0, 0, 0], [255, 0, 0], [255, 0, 0], [255, 255, 0], [255, 255, 0]], // german
+                          [[255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 255, 0], [255, 255, 0], [255, 255, 0]], // spannish
+                          [[255, 0, 0], [255, 255, 0], [255, 0, 0], [255, 255, 0], [255, 0, 0], [255, 255, 0]], // castillan
+                          [[255, 0, 0], [255, 0, 0], [255, 255, 255], [255, 255, 255], [0, 0, 255], [0, 0, 255]], // dutch
+                          [[255, 0, 0], [255, 0, 0], [255, 255, 255], [255, 255, 255], [255, 0, 255], [255, 0, 0]], // austrian/dannish/swiss
+                          [[0, 192, 0], [0, 192, 0], [255, 255, 255], [255, 255, 255], [255, 128, 0], [255, 128, 0]], // irish
+                          [[0, 0, 0], [0, 0, 0], [255, 255, 0], [255, 255, 0], [255, 0, 0], [255, 0, 0]], // belgian
+                          [[255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255]], // all white
+                          [[0, 255, 0], [0, 255, 0], [255, 255, 255], [255, 255, 255], [255, 0, 0], [255, 0, 0]]      // italian
+                        ];
+
+  panX:number                          = 0;
+  panY:number                          = 0;
+
+
+
+  constructor(public val:number) {
+    this.gaussR = val;
+  }
+
+}
+
+var ssg0 = new SaclaySlitherGame(18);
+
+
+function drawBg(n:number){
+  //todo
+}
+function  updateRadar(){
+
+}
+
+
+export let sketch: p5 = new p5(() => { });
+
+
+
+sketch.preload = () => {
+  //const BOOP_FILE = require("./boop.mp3").default
+  //console.log("sketch.preload() "+BOOP_FILE);
+  //boop = new p5.SoundFile(BOOP_FILE, function(){console.log("success")}, function(){console.log("error")}, function(){console.log("loading")})
+  //let boop2: p5.SoundFile = new p5.SoundFile("./boop.mp3", function(){console.log("success2")}, function(){console.log("error2")}, function(){console.log("loading2")})
+  SaclaySlitherGame.boop = new p5.SoundFile("./src/boop.mp3", function(){console.log("success3")}, function(){console.log("error3")}, function(){console.log("loading3")})
+  //let boop4: p5.SoundFile = new p5.SoundFile("./dist/boop.mp3", function(){console.log("success4")}, function(){console.log("error4")}, function(){console.log("loading4")})
+
+  //boop = sketch.loadSound(BOOP_FILE);
+}
+
+sketch.setup=() => {
+  const canvasWidth = sketch.windowWidth;
+  const canvasHeight = sketch.windowHeight;
+  //console.log("sketch.setup() "+canvasWidth+"x"+canvasHeight);
+  sketch.createCanvas(canvasWidth, canvasHeight);
+  sketch.frameRate(60);
+
+   // intitial creation of the snakes
+  ssg0.panX = -canvasWidth/2;
+  ssg0.panY = -canvasHeight/2;
+  for (let k:number=1; k<SaclaySlitherGame.NBINITIALSNAKES; k++) {
+    ssg0.snakes[k] = new Snake(ssg0, ssg0.names[k%ssg0.names.length], 40+50*(k-1),
+      Math.floor(300*Math.cos(k*2*Math.PI/SaclaySlitherGame.NBINITIALSNAKES)),
+      Math.floor(300*Math.sin(k*2*Math.PI/SaclaySlitherGame.NBINITIALSNAKES)),
+      k%ssg0.colors.length,
+      10*Math.cos((k+0)*2*Math.PI/Math.min(SaclaySlitherGame.NBINITIALSNAKES, ssg0.snakes.length)),
+      10*Math.sin((k+0)*2*Math.PI/Math.min(SaclaySlitherGame.NBINITIALSNAKES, ssg0.snakes.length)),
+      Snake.INITIALSTATE);
+  }
+
+  // initial creation of the food
+  for (let k:number=0; k<1000; k++) {
+    ssg0.foods.push(Food.newFood());
+  }
+
+  // we'll need a 2D gaussian set of numbers. let's pre-calculate some
+  for (let k:number=0; k<ssg0.gaussR; k++){
+    ssg0.gauss[k] =[];
+    for (let l:number=0; l<ssg0.gaussR; l++)
+      ssg0.gauss[k][l] = Math.exp(-1.0/ssg0.gaussR/ssg0.gaussR*((k-ssg0.gaussR/2)*(k-ssg0.gaussR/2)+(l-ssg0.gaussR/2)*(l-ssg0.gaussR/2)));
+  }
+
+  // 4 images
+  SaclaySlitherGame.img0 = sketch.createImage(SaclaySlitherGame.IMG_SIZE, SaclaySlitherGame.IMG_SIZE);
+  SaclaySlitherGame.img1 = sketch.createImage(SaclaySlitherGame.IMG_SIZE, SaclaySlitherGame.IMG_SIZE);
+
+  SaclaySlitherGame.img2 = sketch.createImage(SaclaySlitherGame.IMG_SIZE+ssg0.gaussR, SaclaySlitherGame.IMG_SIZE+ssg0.gaussR);
+  SaclaySlitherGame.img3 = sketch.createImage(SaclaySlitherGame.IMG_SIZE+ssg0.gaussR, SaclaySlitherGame.IMG_SIZE+ssg0.gaussR);
+
+  SaclaySlitherGame.img4 = sketch.createImage(SaclaySlitherGame.IMG_SIZE, SaclaySlitherGame.IMG_SIZE);
+  //pg1  = sketch.createGraphics(SaclaySlitherGame.IMG_SIZE, SaclaySlitherGame.IMG_SIZE);
+  //pg2  = sketch.createGraphics(SaclaySlitherGame.IMG_SIZE, SaclaySlitherGame.IMG_SIZE);
+
+  SaclaySlitherGame.imgRadar = sketch.createImage(128, 128);
+  SaclaySlitherGame.img0.loadPixels();
+  SaclaySlitherGame.img1.loadPixels();
+  SaclaySlitherGame.img4.loadPixels();
+  for (let j:number=0; j < SaclaySlitherGame.img1.height; j++) {
+    for (let i:number=0; i < SaclaySlitherGame.img1.width; i++) {
+      let d0:number = 0.7*sketch.dist(i, j, SaclaySlitherGame.img0.width/2, SaclaySlitherGame.img0.height/2)+0.22*Math.abs(i-SaclaySlitherGame.img0.width/2)+0.4*Math.abs(j-SaclaySlitherGame.img0.height/2);
+      let d1:number = sketch.dist(i, j, SaclaySlitherGame.img1.width/2, SaclaySlitherGame.img1.height/2);
+      let iii:number = Math.round(SaclaySlitherGame.img1.width/2+ (i-SaclaySlitherGame.img1.width/2)* (1+Math.sqrt(d1/SaclaySlitherGame.img1.width/2))/2);
+      let jjj:number = Math.round(SaclaySlitherGame.img1.height/2+(j-SaclaySlitherGame.img1.height/2)*(1+Math.sqrt(d1/SaclaySlitherGame.img1.height/2))/2);
+      let di:number = (Math.floor(jjj/16)%2)*8;
+      let ii:number = iii+di;
+      let d3:number = sketch.dist(iii, jjj, iii-ii%16+8, jjj-jjj%16+8);
+      let dl:number = sketch.dist(iii, jjj, SaclaySlitherGame.img1.width/3, SaclaySlitherGame.img1.height/3);
+      if (d0<SaclaySlitherGame.img0.width/2-1) {
+        SaclaySlitherGame.img0.pixels[i*4+j*SaclaySlitherGame.img0.width*4+0] = 255-dl*255/SaclaySlitherGame.img0.width-d3*4;
+        SaclaySlitherGame.img0.pixels[i*4+j*SaclaySlitherGame.img0.width*4+1] = 255-dl*255/SaclaySlitherGame.img0.width-d3*4;
+        SaclaySlitherGame.img0.pixels[i*4+j*SaclaySlitherGame.img0.width*4+2] = 255-dl*255/SaclaySlitherGame.img0.width-d3*4;
+        SaclaySlitherGame.img0.pixels[i*4+j*SaclaySlitherGame.img0.width*4+3] = Math.min(255, i*8);
+      }
+      if (d1<SaclaySlitherGame.img1.width/2-1) {
+        SaclaySlitherGame.img1.pixels[i*4+j*SaclaySlitherGame.img1.width*4+0] = 255-dl*255/SaclaySlitherGame.img1.width-d3*4;
+        SaclaySlitherGame.img1.pixels[i*4+j*SaclaySlitherGame.img1.width*4+1] = 255-dl*255/SaclaySlitherGame.img1.width-d3*4;
+        SaclaySlitherGame.img1.pixels[i*4+j*SaclaySlitherGame.img1.width*4+2] = 255-dl*255/SaclaySlitherGame.img1.width-d3*4;
+        SaclaySlitherGame.img1.pixels[i*4+j*SaclaySlitherGame.img1.width*4+3] = 255;
+      }
+    }
+  }
+
+  // food image
+  for (let j:number=0; j < SaclaySlitherGame.img4.height; j++) {
+    for (let i:number=0; i < SaclaySlitherGame.img4.width; i++) {
+      let d0:number = 0.6*sketch.dist(i, j, SaclaySlitherGame.img4.width/2, SaclaySlitherGame.img4.height/2)+0.6*Math.min(Math.abs(i-SaclaySlitherGame.img4.width/2), Math.abs(j-SaclaySlitherGame.img4.height/2));
+      let d1:number = sketch.dist(i, j, SaclaySlitherGame.img4.width/3, SaclaySlitherGame.img4.height/3);
+      if (d0<SaclaySlitherGame.img4.width/3) {
+        SaclaySlitherGame.img4.pixels[i*4+j*SaclaySlitherGame.img4.width*4+0] = 255-d1*255/SaclaySlitherGame.img4.width;
+        SaclaySlitherGame.img4.pixels[i*4+j*SaclaySlitherGame.img4.width*4+1] = 255-d1*255/SaclaySlitherGame.img4.width;
+        SaclaySlitherGame.img4.pixels[i*4+j*SaclaySlitherGame.img4.width*4+2] = 255-d1*255/SaclaySlitherGame.img4.width;
+        SaclaySlitherGame.img4.pixels[i*4+j*SaclaySlitherGame.img4.width*4+3] = 255;
+      }
+    }
+  }
+
+  // shadows
+  /*for (let j:number=0; j < img1.height; j++) {
+    for (let i:number=0; i < img1.width; i++) {
+      let c2:number = sketch.alpha(pg1.pixels[i+j*pg1.width]);
+      let c3:number = sketch.alpha(pg2.pixels[i+j*pg2.width]);
+      for (let k:number=0; k<ssg0.gaussR; k++) {
+        for (let l:number=0; l<ssg0.gaussR; l++) {
+          img2.pixels[i+l+(j+k)*img2.width] += c2*ssg0.gauss[k][l];
+          img3.pixels[i+l+(j+k)*img3.width] += c3*ssg0.gauss[k][l];
+        }
+      }
+    }
+  }*/
+
+  SaclaySlitherGame.img1.updatePixels();
+  SaclaySlitherGame.img4.updatePixels();
+  SaclaySlitherGame.img0.updatePixels();
+
+  SaclaySlitherGame.img0.resize(SaclaySlitherGame.IMG_SIZE/2, SaclaySlitherGame.IMG_SIZE/2);
+  SaclaySlitherGame.img1.resize(SaclaySlitherGame.IMG_SIZE/2, SaclaySlitherGame.IMG_SIZE/2);
+  SaclaySlitherGame.img4.resize(SaclaySlitherGame.IMG_SIZE/4, SaclaySlitherGame.IMG_SIZE/4);
+}
+
+
+
+
+sketch.draw = () => {
+
+  sketch.noStroke();
+/*  sketch.fill(192);
+  sketch.rect(0,0, sketch.width, sketch.height);
+  if (sketch.mouseIsPressed)
+    sketch.fill(0);
+   else
+    sketch.fill(0);
+
+  //sketch.ellipse(sketch.mouseX, sketch.mouseY, 18, 18);
+  sketch.image(SaclaySlitherGame.img0, 350, 10);
+  sketch.image(SaclaySlitherGame.img1, sketch.mouseX, sketch.mouseY);
+  sketch.image(SaclaySlitherGame.img4, 10, 300);*/
+  sketch.imageMode(sketch.CENTER);
+  sketch.textAlign(sketch.CENTER, sketch.CENTER);
+  sketch.rectMode(sketch.CENTER);
+
+  sketch.push();
+
+  if (ssg0.state==1) {
+    // ecran de demarrage
+    sketch.stroke(0);
+    sketch.fill(255, 224, 192);
+    sketch.textSize(20);
+    sketch.background(255, 192, 128);
+    sketch.rect(sketch.width/2, sketch.height/2+2, 300, 25);
+    sketch.fill(0);
+    sketch.text("Appuyez sur la touche ENTREE pour commencer", sketch.width/2, sketch.height/3);
+    sketch.text("Entrez votre nom :", sketch.width/2, sketch.height/2-25);
+    sketch.text(ssg0.names[0], sketch.width/2, sketch.height/2);
+    sketch.pop();
+    return;
+  } else if (ssg0.state>1) {
+    // Animation de fin de partie
+    sketch.translate(sketch.width/2, sketch.height/2);
+    sketch.scale(ssg0.globZoom);
+    sketch.translate(-sketch.width/2, -sketch.height/2);
+    drawBg((ssg0.state-1.0)/32);
+    sketch.fill(0);
+    sketch.textSize(20+ssg0.state*2);
+    sketch.text("Game OVER", sketch.width/2, sketch.height/2);
+    ssg0.state--;
+  } else {
+    // deplace le serpent 0 en fonction de la souris
+    ssg0.snakes[0]!.moveSnake(((sketch.mouseX-sketch.width/2 )/ssg0.globZoom)+sketch.width/2 +ssg0.panX,
+                             ((sketch.mouseY-sketch.height/2)/ssg0.globZoom)+sketch.height/2+ssg0.panY);
+
+    // si la position du serpent s'approche du bord, on prefere scoller le jeu plutot que de laisser
+    // le serpent s'approcher du bord
+    let p = ssg0.snakes[0]!.pos[0];
+    let px = (p.x-ssg0.panX-(sketch.width/2))*ssg0.globZoom+(sketch.width/2);
+    let py = (p.y-ssg0.panY-(sketch.height/2))*ssg0.globZoom+(sketch.height/2);
+
+    if (px>sketch.width-SaclaySlitherGame.BORDER_SIZE)
+      ssg0.panX = -((((sketch.width-SaclaySlitherGame.BORDER_SIZE)-(sketch.width/2))/ssg0.globZoom)+(sketch.width/2)-p.x);
+    else if (px<SaclaySlitherGame.BORDER_SIZE)
+      ssg0.panX = -((((SaclaySlitherGame.BORDER_SIZE)-(sketch.width/2))/ssg0.globZoom)+(sketch.width/2)-p.x);
+
+    if (py>sketch.height-SaclaySlitherGame.BORDER_SIZE)
+      ssg0.panY = -((((sketch.height-SaclaySlitherGame.BORDER_SIZE)-(sketch.height/2))/ssg0.globZoom)+(sketch.height/2)-p.y);
+    else if (py<SaclaySlitherGame.BORDER_SIZE)
+      ssg0.panY = -((((SaclaySlitherGame.BORDER_SIZE)-(sketch.height/2))/ssg0.globZoom)+(sketch.height/2)-p.y);
+
+    if (ssg0.automaticZoom)
+      ssg0.globZoom = 0.75+64.0/(128.0+ssg0.snakes[0]!.size);
+
+    // on commence par dessine le fond
+    sketch.translate(sketch.width/2, sketch.height/2);
+    sketch.scale(ssg0.globZoom);
+    sketch.translate(-sketch.width/2, -sketch.height/2);
+    drawBg(1.0);
+  }
+
+  // teste si le serpent 0 meurt
+  if (ssg0.snakes[0]!=null && ssg0.snakes[0]!.testCollision()) {
+    // cree de la nourriture a la place de mon corps
+    for (let i=0; i<ssg0.snakes[0]!.pos.length; i++) {
+      let p = ssg0.snakes[0]!.pos[i];
+      let f = new Food(p.x, p.y, 0);
+      f.rd = 10;
+      if (i%2==0) ssg0.foods.push(f);
+    }
+    // tue le serpent
+    ssg0.snakes[0] = null;
+    ssg0.state = 32;
+  }
+
+  // deplace les autres serpents
+  for (let k=1; k<ssg0.snakes.length; k++){
+    if (ssg0.snakes[k]!=null) {
+      let dx = ssg0.snakes[k]!.dirX;
+      let dy = ssg0.snakes[k]!.dirY;
+      let x  = ssg0.snakes[k]!.pos[0].x;
+      let y  = ssg0.snakes[k]!.pos[0].y;
+      let dd = sketch.dist(0, 0, x, y);
+
+      let ndx = sketch.random(10.0, 15)*dx + sketch.random(-8, 8)*dy;
+      let ndy = sketch.random(10.0, 15)*dy - sketch.random(-8, 8)*dx;
+      if (dd>1000) {
+        ndx += -x*(dd-1000)/dd;
+        ndy += -y*(dd-1000)/dd;
+      }
+
+      if (ssg0.snakes[k]!.state==Snake.AVOIDBORDER && ssg0.snakes[k]!.closestSnakeP!=null){
+        let d = sketch.dist(0, 0, x, y);
+        let ddx = -x/d*20;
+        let ddy = -y/d*20;
+        let dda = Math.atan2(ddy, ddx);
+        ssg0.snakes[k]!.moveSnake( x+20*Math.cos(dda), y+20*Math.sin(dda));
+      } else if (ssg0.snakes[k]!.state==Snake.AVOIDCLOSEST && ssg0.snakes[k]!.closestSnakeP!=null){
+        let p = ssg0.snakes[k]!.closestSnakeP!;
+        let ddx = x-p.x;
+        let ddy = y-p.y;
+        let dda = Math.atan2(ddy, ddx);
+        ssg0.snakes[k]!.moveSnake(x+20*Math.cos(dda), y+20*Math.sin(dda));
+      } else if (ssg0.snakes[k]!.state==Snake.AVOIDWORST && ssg0.snakes[k]!.closestBadSnakeP!=null){
+        let p = ssg0.snakes[k]!.closestBadSnakeP!;
+        let ddx = x-p.x;
+        let ddy = y-p.y;
+        let dda = Math.atan2(ddy, ddx);
+        ssg0.snakes[k]!.moveSnake(x+20*Math.cos(dda), y+20*Math.sin(dda));
+      } else if (ssg0.snakes[k]!.state==Snake.GOBESTFOOD && ssg0.snakes[k]!.bestFood!=null){
+        let f = ssg0.snakes[k]!.bestFood!;
+        //console.log(k+"_"+snakes[k].name+" @"+x+","+y+" goes to "+f.x+", "+f.y);
+        ssg0.snakes[k]!.moveSnake( f.x, f.y);
+      } else if (ssg0.snakes[k]!.state==Snake.GOCLOSESTFOOD && ssg0.snakes[k]!.closestFood!=null){
+        let f = ssg0.snakes[k]!.closestFood!;
+        //console.log(k+"_"+snakes[k].name+" @"+x+","+y+" goes to "+f.x+", "+f.y);
+        ssg0.snakes[k]!.moveSnake( f.x, f.y);
+      } else if (ssg0.snakes[k]!.state==Snake.FASTSTRAIGHT){
+        if (ssg0.snakes[k]!.speed<SaclaySlitherGame.MAX_SPEED && ssg0.snakes[k]!.weight>40+SaclaySlitherGame.LOOSEWEIGHT)
+          ssg0.snakes[k]!.speed=SaclaySlitherGame.MAX_SPEED;
+        ssg0.snakes[k]!.moveSnake( x+dx, y+dy);
+      } else if (ssg0.snakes[k]!.state==Snake.ROT){
+        ssg0.snakes[k]!.moveSnake( x+ndx, y+ndy);
+      } else if (ssg0.snakes[k]!.state==Snake.RANDWALK){
+        ssg0.snakes[k]!.moveSnake( x+10*dx-100*dy, y+10*dy+100*dx);
+      } else {
+        ssg0.snakes[k]!.moveSnake( x+dx, y+dy);
+        //console.log(k+"_"+snakes[k].name+" is lost !!! ");
+      }
+
+      if (ssg0.snakes[k]!.testCollision()) {
+        console.log(ssg0.snakes[k]!.name+" is dead");
+        for (let i=0; i<ssg0.snakes[k]!.pos.length; i++) {
+          let p = ssg0.snakes[k]!.pos[i];
+          let f = new Food(p.x, p.y, 0);
+          f.rd = 10;
+          if (i%2==0) ssg0.foods.push(f);
+        }
+        let a = sketch.random(0, 10000)*Math.PI/5000;
+        let d = sketch.random(0, SaclaySlitherGame.WORLDRADIUS);
+        ssg0.snakes[k] = new Snake(ssg0, ssg0.names[k%ssg0.names.length], 40,
+                                   Math.floor(d*Math.cos(a)), Math.floor(d*Math.sin(a)),
+                                   k%ssg0.colors.length, 10* Math.cos(k* Math.PI/3), 10* Math.sin(k* Math.PI/3), Snake.INITIALSTATE);
+      }
+
+      //console.log(snakes[k].name+" @ "+snakes[k].state+" cBSp="+snakes[k].closestBadSnakeP.x+", "+snakes[k].closestBadSnakeP.y);
+
+      // Apres le deplacement on evalue si c'est pas le bon moment de changer de strategie
+      if (ssg0.snakes[k]!.state!=Snake.AVOIDBORDER) {
+        let h = ssg0.snakes[k]!.pos[0];
+        let d = sketch.dist(0, 0, h.x, h.y);
+        if (d>SaclaySlitherGame.WORLDRADIUS-100)
+          ssg0.snakes[k]!.state=Snake.AVOIDBORDER;/////
+      } else if (ssg0.snakes[k]!.state==Snake.AVOIDBORDER) {
+        let h = ssg0.snakes[k]!.pos[0];
+        let d = sketch.dist(0, 0, h.x, h.y);
+        if (d<SaclaySlitherGame.WORLDRADIUS-200)
+          ssg0.snakes[k]!.state=Snake.GOBESTFOOD;/////
+      } else if (ssg0.snakes[k]!.state==Snake.AVOIDWORST && ssg0.snakes[k]!.closestBadSnakeP!=null){
+        let p = ssg0.snakes[k]!.closestBadSnakeP!;
+        let d = ssg0.snakes[k]!.dclosestBadSnake;
+        console.log(ssg0.snakes[k]!.name+" would not be affraid anymore if sketch.dist to "+ssg0.snakes[k]!.closestBadSnake!.name+" ="+d+">400   p="+p.x+","+p.y);
+        if (d>200){
+          ssg0.snakes[k]!.state=Snake.GOBESTFOOD;/////
+          console.log(ssg0.snakes[k]!.name+" is not affraid anymore");
+        }
+      } else if (ssg0.snakes[k]!.state==Snake.AVOIDCLOSEST && ssg0.snakes[k]!.closestSnakeP!=null){
+        let p =ssg0.snakes[k]!.closestSnakeP!;
+        if (ssg0.snakes[k]!.closestSnake==ssg0.snakes[0]!) console.log(ssg0.snakes[k]!.name+" is affraid of me point["+k+"]="+p.x+","+p.y); //+" sketch.dist="+dd +"  DIFFANGLE="+da+" => "+(dd*sin(da/2+1))
+
+        let d = sketch.dist(x, y, p.x, p.y);
+        if (d>300)
+          ssg0.snakes[k]!.state=Snake.GOBESTFOOD;/////
+      } else if (ssg0.snakes[k]!.state==Snake.AVOIDWORST && ssg0.snakes[k]!.closestBadSnakeP==null){
+        ssg0.snakes[k]!.state=Snake.GOBESTFOOD;/////
+        console.log(ssg0.snakes[k]!.name+" is not affraid anymore");
+      } else if (ssg0.snakes[k]!.state==Snake.GOBESTFOOD && ssg0.snakes[k]!.closestBadSnakeP!=null){
+        let p = ssg0.snakes[k]!.closestBadSnakeP!;
+        let d = ssg0.snakes[k]!.dclosestBadSnake;
+        if (d<100){
+          console.log(ssg0.snakes[k]!.name+" is now affraid of "+ssg0.snakes[k]!.closestBadSnake!.name+" because "+d+"<200  p="+p.x+","+p.y);
+          ssg0.snakes[k]!.state=Snake.AVOIDWORST;///
+        }
+      }
+    }
+  }
+
+
+
+  // Affichage de la nourriture
+  for (let k=0; k<ssg0.foods.length; k++) {
+    let f = ssg0.foods[k];
+    sketch.push();
+    sketch.translate(f.x-ssg0.panX+5*Math.cos(f.x+sketch.frameCount/50.0), f.y-ssg0.panY+5*Math.sin(f.y+sketch.frameCount/50.0));
+    sketch.rotate(6*sketch.noise(f.x+Math.cos(sketch.frameCount/50.0), f.y+Math.sin(sketch.frameCount/50.0)));
+    sketch.scale(0.2+Math.sqrt(f.rd)/3.0);
+
+    if (ssg0.state>1)
+      sketch.scale((ssg0.state-1.0)/32);
+    sketch.tint(255-(255-ssg0.colors[f.type][0][0])/2,
+      255-(255-ssg0.colors[f.type][0][1])/2,
+      255-(255-ssg0.colors[f.type][0][2])/2);
+    sketch.image(SaclaySlitherGame.img4, 0, 0);
+    sketch.pop();
+  }
+
+  // affichage des serpents
+  if (ssg0.state>1) {
+    for (let k=0; k<ssg0.snakes.length; k++) {
+      if (ssg0.snakes[k]!=null)
+        ssg0.snakes[k]!.drawSnake((ssg0.state-1.0)/32);
+    }
+  } else {
+    for (let k=0; k<ssg0.snakes.length; k++) {
+      if (ssg0.snakes[k]!=null)
+        ssg0.snakes[k]!.drawSnake(1.0);
+    }
+  }
+
+  sketch.pop();
+
+  /* quadricoptere
+  if (snakes[0]!=null && dispController) {
+    push();
+    Point p = (Point)snakes[0].pos[0];
+    float px = (p.x-panX-(sketch.width/2))*ssg0.globZoom+(sketch.width/2);
+    float py = (p.y-panY-(sketch.height/2))*ssg0.globZoom+(sketch.height/2);
+    sketch.translate(sketch.mouseX/2+px/2, sketch.mouseY/2+py/2);
+    sketch.scale(1.0);
+    if (sketch.frameCount%2==0)
+      sketch.image(img2, 0, 0);
+    else
+      sketch.image(img3, 0, 0);
+    pop();
+  }*/
+
+  // bordure
+  sketch.strokeWeight(4);
+  sketch.noFill();
+  if (SaclaySlitherGame.BORDER_SIZE<sketch.width/2) {
+    for (let dk=0; dk<sketch.width/4-SaclaySlitherGame.BORDER_SIZE/2; dk+=4) {
+      sketch.stroke(0, 128-dk*128/(sketch.width/4-SaclaySlitherGame.BORDER_SIZE/2));
+      sketch.rect(SaclaySlitherGame.BORDER_SIZE-dk, SaclaySlitherGame.BORDER_SIZE-dk, sketch.width-2*(SaclaySlitherGame.BORDER_SIZE-dk), sketch.height-2*(SaclaySlitherGame.BORDER_SIZE-dk));
+    }
+  }
+  sketch.strokeWeight(1);
+
+  // score
+  sketch.fill(0);
+  sketch.textAlign(sketch.LEFT, sketch.BOTTOM);
+  if (ssg0.snakes[0]!=null) {
+    sketch.push();
+    sketch.translate(20, sketch.height-20);
+    //tint(snakes[0].r, snakes[0].g, snakes[0].b);
+    sketch.scale(0.5);
+    sketch.image(SaclaySlitherGame.img0, 0, 0);
+    sketch.scale(2.0);
+    sketch.text(ssg0.snakes[0]!.name+" "+(ssg0.snakes[0]!.weight-30), 0, 0);
+    sketch.pop();
+    sketch.noTint();
+  }
+
+  // meilleurs
+  sketch.rectMode(sketch.CORNER);
+  //sketch.textFont(font0);
+  sketch.textAlign(sketch.RIGHT, sketch.BOTTOM);
+  let maxw = 0;
+  let slist:string[] = []; // ssg0.snakes.length
+  for (let i=0; i<ssg0.snakes.length; i++) {
+    if (ssg0.snakes[i]!=null)
+      slist[i] = sketch.nf(ssg0.snakes[i]!.weight-30, 6)+"_"+i+"%"+ssg0.snakes[i]!.name;
+    else
+      slist[i] = " 0_-1% ";
+    maxw = Math.max(maxw, sketch.textWidth(slist[i]));
+  }
+
+  slist = sketch.sort(slist);
+  for (let i=Math.max(0,slist.length-10); i<slist.length; i++) {
+    let ii     = i-(ssg0.snakes.length-10);
+    let score  = parseInt(slist[i].substring(0, slist[i].indexOf("_")));
+    let index  = parseInt(slist[i].substring(slist[i].indexOf("_")+1, slist[i].indexOf("%")));
+    let name = slist[i].substring(slist[i].indexOf("%")+1);
+    if(index>=0){
+      let  s   = ssg0.snakes[index]!;
+
+      sketch.fill(ssg0.colors[s.type][0][0], ssg0.colors[s.type][0][1], ssg0.colors[s.type][0][2], 96);
+      if (index==0) {
+       // sketch.textFont(font1);
+        sketch.stroke(255);
+      } else {
+       // sketch.textFont(font0);
+        sketch.noStroke();
+      }
+      sketch.rect(sketch.width-5-maxw, 185-ii*20, maxw, 19);
+
+      sketch.fill(0);
+      sketch.textAlign(sketch.RIGHT, sketch.BOTTOM);
+      sketch.text(score, sketch.width-5, 205-ii*20);
+      sketch.textAlign(sketch.LEFT, sketch.BOTTOM);
+      sketch.text(name, sketch.width-5-maxw, 205-ii*20);
+    }
+  }
+  //textFont(font0);
+
+   //dessin du radar
+  if(sketch.frameCount%25==0)
+    updateRadar();
+  sketch.image(SaclaySlitherGame.imgRadar, sketch.width-74, sketch.height-74);
+  sketch.noFill();
+  sketch.stroke(255, 255, 0);
+  sketch.ellipse(sketch.width-74, sketch.height-74, 128, 128);
+  sketch.stroke(255, 255, 0, 64);
+  sketch.line(sketch.width-74, sketch.height-74, sketch.width-74+60*Math.cos(sketch.frameCount/12.5*Math.PI), sketch.height-74+60*Math.sin(sketch.frameCount/12.5*Math.PI));
+
+   sketch.image(SaclaySlitherGame.img0, 10 ,10);
+   sketch.image(SaclaySlitherGame.img1, 250 ,10);
+
+}
+sketch.mousePressed = () => {
+  //console.log("boop.play()");
+  SaclaySlitherGame.boop.play();
+}
+
+sketch.keyPressed = () => {
+  console.log("keyPressed "+ssg0.state+" "+sketch.keyCode);
+  if (ssg0.state==1 && sketch.keyCode!=10 && sketch.keyCode!=13){
+    if (sketch.keyCode==8 && ssg0.names[0].length>0)
+      ssg0.names[0] = ssg0.names[0].substring(0, ssg0.names[0].length-1);
+    else if (((sketch.key>='A' && sketch.key<='Z')||(sketch.key>='0' && sketch.key<='9')||(sketch.key>='a' && sketch.key<='z')||(sketch.key==' ')) && ssg0.names[0].length<24)
+      ssg0.names[0] = ssg0.names[0]+sketch.key;
+  } else if (ssg0.state==1 && (sketch.keyCode==10 || sketch.keyCode==13)) {
+    ssg0.snakes[0] = new Snake(ssg0, ssg0.names[0], 240, 0, 0 , 0, 10, 0, Snake.FREE);
+    ssg0.state = 0;
+    console.log("GO");
+  } else if (sketch.key==' ' && ssg0.snakes[0]!=null && ssg0.snakes[0]!.weight>40+SaclaySlitherGame.LOOSEWEIGHT)
+    ssg0.snakes[0]!.speed = SaclaySlitherGame.MAX_SPEED;
+  else if (sketch.keyCode==37)
+    ssg0.panX+=1;
+  else if (sketch.keyCode==38)
+    ssg0.panY+=1;
+  else if (sketch.keyCode==39)
+    ssg0.panX-=1;
+  else if (sketch.keyCode==40)
+    ssg0.panY-=1;
+  else if (sketch.key=='n'){
+    ssg0.globZoom*=0.95;
+    ssg0.automaticZoom = false;
+  } else if (sketch.key=='m'){
+    ssg0.globZoom*=1.05;
+    ssg0.automaticZoom = false;
+  }
+}
+
+sketch.keyReleased = () => {
+  if (ssg0.snakes[0]!=null && sketch.key==' ')
+    ssg0.snakes[0]!.speed = SaclaySlitherGame.PREF_SPEED;
+}
+
+
